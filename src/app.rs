@@ -1,12 +1,10 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::components::{
-    about::About,
-    footer::Footer,
-    home::Home
-};
+use crate::components::footer::Footer;
 use crate::routes::{
+    home::Home,
+    work::Work,
     fix_fragment_routes,
     AppRoute
 };
@@ -60,12 +58,8 @@ impl Component for App {
                 {
                     if let Some(route) = &self.current_route {
                         match route {
-                            AppRoute::Home => html!{         
-                                <>
-                                    <Home />
-                                    <About />
-                                </>
-                            }
+                            AppRoute::Home => html!{ <Home /> },
+                            AppRoute::Work => html!{ <Work /> }
                         }
                     } else {
                         // 404 when route matches no component

@@ -1,3 +1,6 @@
+pub mod home;
+pub mod work;
+
 use yew_router::prelude::*;
 
 /// App routes
@@ -5,6 +8,8 @@ use yew_router::prelude::*;
 pub enum AppRoute {
     #[to = "#/"]
     Home,
+    #[to = "#/work"]
+    Work,
 }
 
 /// Fix fragment handling problem for yew_router

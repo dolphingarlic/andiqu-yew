@@ -24,10 +24,10 @@ impl Component for Footer {
                     <div class="row">
                         <div class="navlinks my-3 col-lg-6 col-md-12">
                             <nav class="row">
-                                <a class="col" href="#"><h2>{ "HOME" }</h2></a>
-                                <a class="col" href="#"><h2>{ "WORK" }</h2></a>
+                                <a class="col" href="/"><h2>{ "HOME" }</h2></a>
+                                <a class="col" href="/work"><h2>{ "WORK" }</h2></a>
                                 <a class="col" href="#"><h2>{ "BLOG" }</h2></a>
-                                <a class="col" href="#"><h2>{ "FUN" }</h2></a>
+                                <a class="col" href="/fun"><h2>{ "FUN" }</h2></a>
                             </nav>
                         </div>
                         <div class="social my-3 col-lg-4 col-md-8 col-sm-12">

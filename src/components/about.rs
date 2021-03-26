@@ -93,6 +93,8 @@ impl Component for About {
                                 wait_time=1500
                             />
                         </p>
+
+                        <p>{ "TODO" }</p>
                     </div>
                 </div>
             </>

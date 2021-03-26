@@ -1,3 +1,5 @@
+// TODO: Copy Sushain's website: https://www.skc.name/
+
 use yew::prelude::*;
 
 pub struct Work {
@@ -24,7 +26,11 @@ impl Component for Work {
 
     fn view(&self) -> Html {
         html! {
-            <p>{ "TODO: Work" }</p>
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-2">{ "STUFF I'VE DONE" }</h1>
+                </div>
+            </div>
         }
     }
 }

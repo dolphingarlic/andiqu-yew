@@ -6,10 +6,14 @@ use yew_router::prelude::*;
 /// App routes
 #[derive(Switch, Debug, Clone)]
 pub enum AppRoute {
-    #[to = "#/"]
-    Home,
     #[to = "#/work"]
     Work,
+    #[to = "#/blog"]
+    Blog,
+    #[to = "#/fun"]
+    Fun,
+    #[to = "#/"]
+    Home,
 }
 
 /// Fix fragment handling problem for yew_router

@@ -76,7 +76,7 @@ impl Component for Home {
 
         html! {
             <>
-                <div class="home centered jumbotron">
+                <section class="home centered jumbotron">
                     <div class="container">
                         <h1 class="display-1">{ "ANDI QU - THE WEBSITE" }</h1>
                         <h2>{ "Now (almost) truly a JavaScript-free zone!" }</h2>
@@ -93,11 +93,11 @@ impl Component for Home {
                             { " (but unfortunately, one cannot completely escape JS in modern web development... for now.)" }
                         </p>
                     </div>
-                </div>
-                <div class="about-bg" />
-                <div class="about-bg about-bg2" />
-                <div class="about-bg about-bg3" />
-                <div class="about jumbotron">
+                </section>
+                <section class="about jumbotron">
+                    <div class="about-bg" />
+                    <div class="about-bg about-bg2" />
+                    <div class="about-bg about-bg3" />
                     <div class="container">
                         <h1 class="display-2">
                             { "ABOUT ME" }
@@ -128,7 +128,8 @@ impl Component for Home {
 
                         <p>{ "TODO" }</p>
                     </div>
-                </div>
+                </section>
+
                 <div class="signature">
                     <div class="triangle" />
                     <Typist

@@ -59,11 +59,17 @@ impl Component for App {
                     if let Some(route) = &self.current_route {
                         match route {
                             AppRoute::Home => html!{ <Home /> },
-                            AppRoute::Work => html!{ <Work /> }
+                            AppRoute::Work => html!{ <Work /> },
+                            AppRoute::Blog => html! { "Blog not implemented yet :P" },
+                            AppRoute::Fun => html! { "Fun not implemented yet :P" }
                         }
                     } else {
                         // 404 when route matches no component
-                        html! { "404 error beep boop" }
+                        html! {
+                            <div class="jumbotron centered">
+                                <h1 class="display-1">{ "404: Andi made a boo-boo" }</h1>
+                            </div>
+                        }
                     }
                 }
                 </main>

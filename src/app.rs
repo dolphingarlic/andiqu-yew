@@ -3,6 +3,7 @@ use yew_router::prelude::*;
 
 use crate::components::footer::Footer;
 use crate::routes::{
+    fun::Fun,
     home::Home,
     work::Work,
     fix_fragment_routes,
@@ -61,7 +62,7 @@ impl Component for App {
                             AppRoute::Home => html!{ <Home /> },
                             AppRoute::Work => html!{ <Work /> },
                             AppRoute::Blog => html! { "Blog not implemented yet :P" },
-                            AppRoute::Fun => html! { "Fun not implemented yet :P" }
+                            AppRoute::Fun => html! { <Fun /> }
                         }
                     } else {
                         // 404 when route matches no component

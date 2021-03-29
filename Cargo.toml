@@ -1,7 +1,7 @@
 [package]
 name = "andiqu-yew"
 version = "0.1.0"
-authors = ["Andi <aqu@bscglobal.com>"]
+authors = ["Andi <andi@andiqu.com>"]
 edition = "2018"
 
 [lib]
@@ -29,6 +29,14 @@ js-sys = "0.3.37"
 wasm-bindgen-futures = "0.4.10"
 wasm-bindgen-test = "0.3.10"
 
-# [profile.release]
-# lto = true
-# opt-level = 's'
+[profile.release]
+# less code to include into binary
+panic = 'abort' 
+# optimization over all codebase ( better optimization, slower build )
+codegen-units = 1
+# optimization for size ( more aggressive )
+opt-level = 'z' 
+# optimization for size 
+# opt-level = 's' 
+# link time optimization using using whole-program analysis
+lto = true

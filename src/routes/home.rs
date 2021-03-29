@@ -74,6 +74,16 @@ impl Component for Home {
             ]
         };
 
+        let description = if self.is_spicy {
+            html! {
+                <p>{ "TODO: Spicy description" }</p>
+            }
+        } else {
+            html! {
+                <p>{ "TODO: Sweet description" }</p>
+            }
+        };
+
         html! {
             <>
                 <section class="home centered jumbotron">
@@ -95,9 +105,6 @@ impl Component for Home {
                     </div>
                 </section>
                 <section class="about jumbotron">
-                    <div class="about-bg" />
-                    <div class="about-bg about-bg2" />
-                    <div class="about-bg about-bg3" />
                     <div class="container">
                         <h1 class="display-2">
                             { "ABOUT ME" }
@@ -126,7 +133,7 @@ impl Component for Home {
                             />
                         </p>
 
-                        <p>{ "TODO" }</p>
+                        { description }
                     </div>
                 </section>
 

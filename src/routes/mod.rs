@@ -1,3 +1,4 @@
+pub mod fun;
 pub mod home;
 pub mod work;
 

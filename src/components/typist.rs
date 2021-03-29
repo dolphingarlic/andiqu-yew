@@ -104,21 +104,25 @@ impl Component for Typist {
     }
 
     fn change(&mut self, props: Self::Properties) -> ShouldRender {
-        // Set prop values
-        self.word_list = props.word_list;
-        self.type_time = props.type_time;
-        self.wait_time = props.wait_time;
-        // Reset other variables
-        self.word_idx = 0;
-        self.curr_chars = self.word_list[0].chars();
-        self.curr_speed = self.type_time / self.word_list[0].len() as u64;
-        self.type_fwd = true;
-        self.curr_string = String::new();
-        // Clear the timeout
-        drop(&mut self.timeout_handle);
-        self.timeout_handle = None;
+        if self.word_list != props.word_list {
+            // Set prop values
+            self.word_list = props.word_list;
+            self.type_time = props.type_time;
+            self.wait_time = props.wait_time;
+            // Reset other variables
+            self.word_idx = 0;
+            self.curr_chars = self.word_list[0].chars();
+            self.curr_speed = self.type_time / self.word_list[0].len() as u64;
+            self.type_fwd = true;
+            self.curr_string = String::new();
+            // Clear the timeout
+            drop(&mut self.timeout_handle);
+            self.timeout_handle = None;
 
-        true
+            true
+        } else {
+            false
+        }
     }
 
     fn view(&self) -> Html {

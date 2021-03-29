@@ -25,41 +25,53 @@ impl Component for Footer {
             <footer class="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="navlinks my-3 col-lg-6 col-md-12">
+                        <div class="navlinks my-3 col">
                             <nav class="row">
-                                <RouterAnchor<AppRoute> route=AppRoute::Home classes="col">
+                                <RouterAnchor<AppRoute>
+                                    route=AppRoute::Home
+                                    classes="col-lg-3 col-md-6 col-sm-12"
+                                >
                                     <h2>{ "HOME" }</h2>
                                 </RouterAnchor<AppRoute>>
-                                <RouterAnchor<AppRoute> route=AppRoute::Work classes="col">
+                                <RouterAnchor<AppRoute>
+                                    route=AppRoute::Work
+                                    classes="col-lg-3 col-md-6 col-sm-12"
+                                >
                                     <h2>{ "WORK" }</h2>
                                 </RouterAnchor<AppRoute>>
-                                <RouterAnchor<AppRoute> route=AppRoute::Blog classes="col">
-                                    <h2>{ "BLOG" }</h2>
-                                </RouterAnchor<AppRoute>>
-                                <RouterAnchor<AppRoute> route=AppRoute::Fun classes="col">
+                                <RouterAnchor<AppRoute>
+                                    route=AppRoute::Fun
+                                    classes="col-lg-3 col-md-6 col-sm-12"
+                                >
                                     <h2>{ "FUN" }</h2>
                                 </RouterAnchor<AppRoute>>
+                                <a class="col-lg-3 col-md-6 col-sm-12" href="#">
+                                    <h2>{ "BLOG" }</h2>
+                                </a>
                             </nav>
                         </div>
-                        <div class="social my-3 col-lg-4 col-md-8 col-sm-12">
+                        <div class="col">
                             <div class="row">
-                                <a class="col" href="#">{ "FACEBOOK" }</a>
-                                <a class="col" href="#">{ "GITHUB" }</a>
-                                <a class="col" href="#">{ "SPOTIFY" }</a>
-                            </div>
-                            <div class="row">
-                                <a class="col" href="#">{ "INSTAGRAM" }</a>
-                                <a class="col" href="#">{ "YOUTUBE" }</a>
-                                <a class="col" href="#">{ "LINKEDIN" }</a>
-                            </div>
-                        </div>
-                        <div class="copyright my-3 col-lg-2 col-md-4 col-sm-12">
-                            <div>{ "© Andi Qu 2021" }</div>
-                            <div>
-                                { "Built with " }
-                                <a href="https://yew.rs/docs/en/">{ "Yew" }</a>
-                                { " & " }
-                                <a href="https://www.buymeacoffee.com/andiqu">{ "💖" }</a>
+                                <div class="social my-3 col-lg-8 col-md-12">
+                                    <div class="row">
+                                        // TODO: Replace with icons
+                                        <a class="col-md-4 col-sm-6" href="#">{ "FACEBOOK" }</a>
+                                        <a class="col-md-4 col-sm-6" href="#">{ "GITHUB" }</a>
+                                        <a class="col-md-4 col-sm-6" href="#">{ "SPOTIFY" }</a>
+                                        <a class="col-md-4 col-sm-6" href="#">{ "INSTAGRAM" }</a>
+                                        <a class="col-md-4 col-sm-6" href="#">{ "YOUTUBE" }</a>
+                                        <a class="col-md-4 col-sm-6" href="#">{ "LINKEDIN" }</a>
+                                    </div>
+                                </div>
+                                <div class="copyright my-3 col-lg-4 col-md-12">
+                                    <div>{ "© Andi Qu 2021" }</div>
+                                    <div>
+                                        { "Built with " }
+                                        <a href="https://yew.rs/">{ "Yew" }</a>
+                                        { " & " }
+                                        <a href="https://www.buymeacoffee.com/andiqu">{ "💖" }</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

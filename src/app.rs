@@ -2,23 +2,18 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 use crate::components::footer::Footer;
-use crate::routes::{
-    fun::Fun,
-    home::Home,
-    work::Work,
-    fix_fragment_routes,
-    AppRoute
-};
+use crate::routes::{fix_fragment_routes, fun::Fun, home::Home, work::Work, AppRoute};
 
 pub struct App {
     current_route: Option<AppRoute>,
     #[allow(unused)]
     router_agent: Box<dyn Bridge<RouteAgent>>,
-    link: ComponentLink<Self>
+    #[allow(unused)]
+    link: ComponentLink<Self>,
 }
 
 pub enum Msg {
-    Route(Route)
+    Route(Route),
 }
 
 impl Component for App {
@@ -33,7 +28,7 @@ impl Component for App {
         App {
             current_route: AppRoute::switch(route),
             router_agent,
-            link
+            link,
         }
     }
 
@@ -52,7 +47,6 @@ impl Component for App {
     }
 
     fn view(&self) -> Html {
-
         html! {
             <>
                 <main>
@@ -61,14 +55,14 @@ impl Component for App {
                         match route {
                             AppRoute::Home => html!{ <Home /> },
                             AppRoute::Work => html!{ <Work /> },
-                            AppRoute::Blog => html! { "Blog not implemented yet :P" },
+                            AppRoute::Blog => html! {"Blog not implemented yet :P"},
                             AppRoute::Fun => html! { <Fun /> }
                         }
                     } else {
                         // 404 when route matches no component
                         html! {
                             <div class="jumbotron centered">
-                                <h1 class="display-1">{ "404: Andi made a boo-boo" }</h1>
+                                <h1 class="display-1">{"404: Andi made a boo-boo"}</h1>
                             </div>
                         }
                     }

@@ -31,7 +31,7 @@ wasm-bindgen-test = "0.3.10"
 
 [profile.release]
 # less code to include into binary
-panic = 'abort' 
+panic = 'abort'
 # optimization over all codebase ( better optimization, slower build )
 codegen-units = 1
 # optimization for size ( more aggressive )

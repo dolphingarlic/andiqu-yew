@@ -129,7 +129,7 @@ impl Component for Typist {
         html! {
             <span class="typist">
                 <span class="typing">{ &self.curr_string[..] }</span>
-                <span class="blinking">{ "|" }</span>
+                <span class="blinking">{"|"}</span>
             </span>
         }
     }

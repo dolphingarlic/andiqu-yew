@@ -3,7 +3,7 @@
 use yew::prelude::*;
 
 pub struct Work {
-    link: ComponentLink<Self>
+    link: ComponentLink<Self>,
 }
 
 impl Component for Work {
@@ -11,9 +11,7 @@ impl Component for Work {
     type Properties = ();
 
     fn create(_: Self::Properties, link: ComponentLink<Self>) -> Self {
-        Work {
-            link
-        }
+        Work { link }
     }
 
     fn update(&mut self, _: Self::Message) -> ShouldRender {
@@ -26,11 +24,13 @@ impl Component for Work {
 
     fn view(&self) -> Html {
         html! {
-            <div class="jumbotron">
-                <div class="container">
-                    <h1 class="display-2">{ "STUFF I'VE DONE" }</h1>
+            <section class="work">
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1 class="display-2">{"MY WORK & EXPERIENCE"}</h1>
+                    </div>
                 </div>
-            </div>
+            </section>
         }
     }
 }

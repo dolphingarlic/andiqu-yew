@@ -52,6 +52,8 @@ impl Component for Home {
 
         let spicy_label = if self.is_spicy { "Spicy" } else { "Sweet" };
 
+        let about_colour = if self.is_spicy { "about jumbotron orange" } else { "about jumbotron yellow" };
+
         let iama: Vec<&str> = if self.is_spicy {
             vec![
                 " a level-42 pigeon enthusiast.",
@@ -91,6 +93,8 @@ impl Component for Home {
                         place! But nothing quite beats the adrenaline rush I get from "}
                         <strong>{"submitting code without compiling it locally first"}</strong>{"."}
                     </p>
+                    // TODO: Paragraph about creating software (mention some spicier projects like
+                    //       Tom StaglAIno and St0nks)
                 </>
             }
         } else {
@@ -106,9 +110,10 @@ impl Component for Home {
                         <h1 class="display-1">{"ANDI QU - THE WEBSITE"}</h1>
                         <h2>{"Now (almost) truly a JavaScript-free zone!"}</h2>
                         <hr />
-                        <p>{"I like computer science, pigeons, and education, but I really don't like J*vaScr*pt."}</p>
                         <p>
-                            {"That's why I decided to remake "}
+                            {"I like computer science, pigeons, and education,
+                            but I really don't like J*vaScr*pt.
+                            That's why I decided to remake "}
                             <strong>{"Andi Qu - The Website"}</strong>
                             {" with as little JS as possible!"}
                         </p>
@@ -120,7 +125,7 @@ impl Component for Home {
                         </p>
                     </div>
                 </section>
-                <section class="about jumbotron">
+                <section class={about_colour}>
                     <div class="container">
                         <h1 class="display-2">
                             {"ABOUT ME"}

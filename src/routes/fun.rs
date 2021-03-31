@@ -55,7 +55,7 @@ impl Component for Fun {
                     <hr />
 
                     <h2>{"ALL"}</h2>
-                    <p>{"TODO: Card list"}</p>
+                    <p>{"TODO: Card list from a JSON list (use serde.rs and std::fs)"}</p>
                 </div>
             </section>
         }

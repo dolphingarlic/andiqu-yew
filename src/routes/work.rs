@@ -27,7 +27,43 @@ impl Component for Work {
             <section class="work">
                 <div class="jumbotron">
                     <div class="container">
-                        <h1 class="display-2">{"MY WORK & EXPERIENCE"}</h1>
+                        <h1 class="display-2">{"MY EXPERIENCE"}</h1>
+                        <ul>
+                            <li>
+                                <details>
+                                    <summary>{"Work & Education"}</summary>
+                                    <h5>{"Work"}</h5>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                <strong>{"Jan 2021 - Present:"}</strong>
+                                                {" Junior Developer - BSC Global"}
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary>{"Awards & Recognitions"}</summary>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary>{"Projects & Publications"}</summary>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary>{"Volunteering"}</summary>
+                                </details>
+                            </li>
+                            <li>
+                                <details>
+                                    <summary>{"Skills & Languages"}</summary>
+                                </details>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>

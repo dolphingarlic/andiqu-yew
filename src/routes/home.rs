@@ -36,23 +36,13 @@ impl Component for Home {
     }
 
     fn view(&self) -> Html {
-        let greetings: Vec<&str> = vec![
-            "Hello! My name is Andi.",
-            "你好！ 我叫安迪。",
-            "Hallo! My naam is Andi.",
-            "Tere! Minu nimi on Andi.",
-            "Hallo! Ich heiße Andi.",
-            "¡Hola! Mi nombre es Andi.",
-            "Sawubona! Igama lami ngingu-Andi.",
-            "สวัสดี! ฉันชื่อ Andi.",
-            "Bonjour! Je m'appelle Andi.",
-            "Привет! Меня зовут анди.",
-            "हैलो! मेरा नाम एंडी है.",
-        ];
-
         let spicy_label = if self.is_spicy { "Spicy" } else { "Sweet" };
 
-        let about_colour = if self.is_spicy { "about jumbotron orange" } else { "about jumbotron yellow" };
+        let about_colour = if self.is_spicy {
+            "jumbotron orange"
+        } else {
+            "jumbotron yellow"
+        };
 
         let iama: Vec<&str> = if self.is_spicy {
             vec![
@@ -105,14 +95,14 @@ impl Component for Home {
 
         html! {
             <>
-                <section class="home centered jumbotron">
+                <section id="home" class="centered jumbotron">
                     <div class="container">
                         <h1 class="display-1">{"ANDI QU - THE WEBSITE"}</h1>
                         <h2>{"Now (almost) truly a JavaScript-free zone!"}</h2>
                         <hr />
                         <p>
-                            {"I like computer science, pigeons, and education,
-                            but I really don't like J*vaScr*pt.
+                            {"I like a lot of things, but one thing
+                            I really dislike is J*vaScr*pt.
                             That's why I decided to remake "}
                             <strong>{"Andi Qu - The Website"}</strong>
                             {" with as little JS as possible!"}
@@ -125,7 +115,7 @@ impl Component for Home {
                         </p>
                     </div>
                 </section>
-                <section class={about_colour}>
+                <section id="about" class={about_colour}>
                     <div class="container">
                         <h1 class="display-2">
                             {"ABOUT ME"}
@@ -159,16 +149,6 @@ impl Component for Home {
                         </p>
                     </div>
                 </section>
-
-                // Greetings signature at the top of the screen
-                <div class="signature">
-                    <div class="triangle" />
-                    <Typist
-                        word_list=greetings
-                        type_time=1000
-                        wait_time=2000
-                    />
-                </div>
             </>
         }
     }

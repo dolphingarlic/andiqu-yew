@@ -4,20 +4,20 @@ pub mod work;
 
 use yew_router::prelude::*;
 
-/// App routes
+// App routes
 #[derive(Switch, Debug, Clone)]
 pub enum AppRoute {
     #[to = "#/work"]
     Work,
-    #[to = "#/blog"]
-    Blog,
     #[to = "#/fun"]
     Fun,
+    #[to = "#/how-its-made"]
+    HowItsMade,
     #[to = "#/"]
     Home,
 }
 
-/// Fix fragment handling problem for yew_router
+// Fix fragment handling problem for yew_router
 pub fn fix_fragment_routes(route: &mut Route) {
     let r = route.route.as_str();
     if let Some(index) = r.find('#') {

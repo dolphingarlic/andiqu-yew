@@ -7,12 +7,6 @@ version = "0.1.0"
 [lib]
 crate-type = ["cdylib", "rlib"]
 
-[toolchain]
-channel = "nightly-2021-03-11"
-components = ["rustfmt", "rustc-dev", "rustc"]
-profile = "minimal"
-targets = ["wasm32-unknown-unknown"]
-
 [dependencies]
 wasm-bindgen = "0.2.67"
 wasm-logger = "0.2.0"

@@ -28,9 +28,11 @@ fn render_item(item: &FunItem) -> Html {
             <div class="card">
                 <img src={item.thumbnail_url} height="100px" width="100px" class="my-3 ms-3" />
                 <div class="card-body">
-                    <a href={item.link}>
-                        <h4 class="card-title">{item.title}</h4>
-                    </a>
+                    <h4 class="card-title">
+                        <a class="animated link-blue" href={item.link}>
+                            {item.title}
+                        </a>
+                    </h4>
                     <p class="card-text">{item.description}</p>
                 </div>
             </div>

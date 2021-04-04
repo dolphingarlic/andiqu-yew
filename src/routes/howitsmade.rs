@@ -32,9 +32,9 @@ impl Component for HowItsMade {
 
                         <p>
                             {"This website is mainly powered by "}
-                            <a href="https://yew.rs">{"Yew"}</a>
+                            <a class="animated link-purple" href="https://yew.rs">{"Yew"}</a>
                             {" - a "}
-                            <a href="https://rustlang.org">{"Rust"}</a>
+                            <a class="animated link-purple" href="https://rustlang.org">{"Rust"}</a>
                             {" framework for creating WebAssembly apps."}
                         </p>
                         <p>
@@ -49,20 +49,20 @@ impl Component for HowItsMade {
                             the greetings typer in the navbar) were made with
                             Rust - no JS at all! Even the routing was done using
                             Yew's "}
-                            <a href="https://docs.rs/yew-router/0.14.0/yew_router">{"yew_router"}</a>
+                            <a class="animated link-purple" href="https://docs.rs/yew-router/0.14.0/yew_router">{"yew_router"}</a>
                             {" extension."}
                         </p>
                         <p>
                             {"I used "}
-                            <a href="https://getbootstrap.com">{"Bootstrap 5"}</a>
+                            <a class="animated link-purple" href="https://getbootstrap.com">{"Bootstrap 5"}</a>
                             {" to create the responsive UI, and the cool
                             backgrounds are mainly from "}
-                            <a href="https://www.svgbackgrounds.com">{"SVGBackgrounds.com"}</a>
+                            <a class="animated link-purple" href="https://www.svgbackgrounds.com">{"SVGBackgrounds.com"}</a>
                             {". I think these are great free resources,
                             and I encourage you to try them out if you want
                             to create your own website too! (I made the animated
                             background on the "}
-                            <RouterAnchor<AppRoute> route=AppRoute::Fun>
+                            <RouterAnchor<AppRoute> classes="animated link-purple" route=AppRoute::Fun>
                                 {"Fun page"}
                             </RouterAnchor<AppRoute>>
                             {" manually, so you'll have to look through
@@ -70,13 +70,13 @@ impl Component for HowItsMade {
                         </p>
                         <p>
                             {"I host this website on "}
-                            <a href="https://netlify.com">{"Netlify"}</a>
+                            <a class="animated link-purple" href="https://netlify.com">{"Netlify"}</a>
                             {" - a nice free static-website hosting service."}
                         </p>
                         <p>
                             {"If you want to check out the actual Rust code
                             powering this website, feel free to check out its "}
-                            <a href="https://github.com/dolphingarlic/andiqu-yew">{"GitHub repository"}</a>
+                            <a class="animated link-purple" href="https://github.com/dolphingarlic/andiqu-yew">{"GitHub repository"}</a>
                             {" (and maybe follow me on GitHub while you're at it 😉.)"}
                         </p>
                     </div>

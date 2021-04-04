@@ -32,10 +32,30 @@ h5 {
 
 a {
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
-a:hover {
-    text-decoration: underline;
+a.animated {
+    z-index: 2;
+}
+
+a.animated::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    z-index: -1;
+    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+
+a.animated:hover::after {
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 100%;
 }
 
 /* Home component styling */
@@ -54,7 +74,7 @@ a:hover {
 #home h3,
 #home h4,
 #home h5 {
-    color: #71000f;
+    color: #a01124;
 }
 
 #about.orange {
@@ -192,6 +212,10 @@ a:hover {
     border-radius: 5px;
 }
 
+#fun .card-title a {
+    font-size: 1.5rem;
+}
+
 /* How it's made styling */
 
 #how-its-made {
@@ -199,7 +223,7 @@ a:hover {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23cc99ff' stroke-width='0.2' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cuse fill='%23cd9bff' href='%23s' y='2'/%3E%3Cuse fill='%23cd9bff' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23ce9dff' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23ce9dff' href='%23s'/%3E%3Cuse fill='%23cf9fff' href='%23s' x='2'/%3E%3Cuse fill='%23cf9fff' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cg fill='%23d0a1ff'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cg fill='%23d0a1ff'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cg fill='%23d1a3ff'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cg fill='%23cc99ff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23d2a5ff'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cg fill='%23cc99ff'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cg fill='%23cc99ff'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='rotate(35 1000 750) scale(48.95) translate(-979.57 -734.68)'%3E%3Cg fill='%23cc99ff'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
     background-attachment: fixed;
     background-size: cover;
-    color: #3b0057;
+    color: #1a0e2d;
 }
 
 #how-its-made a,
@@ -208,7 +232,7 @@ a:hover {
 #how-its-made h3,
 #how-its-made h4,
 #how-its-made h5 {
-    color: #1a0e2d;
+    color: #57067c;
 }
 
 /* Typist component styling */
@@ -269,4 +293,46 @@ a:hover {
 
 #copyright p {
     margin-bottom: 0;
+}
+
+/* Colours */
+
+a.link-red::after {
+    background-color: #a011243f;
+}
+
+a.link-blue::after {
+    background-color: #007f803f;
+}
+
+a.link-purple::after {
+    background-color: #57067c3f;
+}
+
+a.link-grey::after {
+    background-color: #cccccc3f;
+}
+
+a.hover-red:hover {
+    color: #ff9e9e !important;
+}
+
+a.hover-orange:hover {
+    color: #ffd2a8 !important;
+}
+
+a.hover-yellow:hover {
+    color: #ffffbf !important;
+}
+
+a.hover-green:hover {
+    color: #b4f0a7 !important;
+}
+
+a.hover-blue:hover {
+    color: #a9d1f7 !important;
+}
+
+a.hover-purple:hover {
+    color: #cc99ff !important;
 }

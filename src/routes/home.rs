@@ -109,7 +109,7 @@ impl Component for Home {
                         </p>
                         <p>
                             {"I achieved this by mainly using Rust and "}
-                            <a href="https://webassembly.org/">{"WebAssembly"}</a>
+                            <a class="animated link-red" href="https://webassembly.org/">{"WebAssembly"}</a>
                             {" (but unfortunately, one cannot completely escape JS
                             in modern web development... for now.)"}
                         </p>

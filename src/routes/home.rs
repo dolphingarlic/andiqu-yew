@@ -77,19 +77,52 @@ impl Component for Home {
                         {"I am "}<strong>{"motivated to take risks"}</strong>{". Sometimes, because I like
                         to live dangerously, I play chess with "}<strong>{"one fewer pawn"}</strong>
                         {" and solve "}<strong>{"geometry in pen"}</strong>{". Sometimes I even
-                        play the Wii without the safety strap! I know
-                        - I'm a real daredevil. Sometimes I'm even amazed myself
-                        that I've managed to survive this long in the first
+                        play the Wii without the safety strap! I know - I'm a real daredevil. Sometimes
+                        I'm even amazed myself that I've managed to survive this long in the first
                         place! But nothing quite beats the adrenaline rush I get from "}
                         <strong>{"submitting code without compiling it locally first"}</strong>{"."}
                     </p>
-                    // TODO: Paragraph about creating software (mention some spicier projects like
-                    //       Tom StaglAIno and St0nks)
+                    <p>
+                        {"I am also motivated to create "}<strong>{"bleeding-edge quantum distributed
+                        AI-powered blockchain cloud-automated solutions"}</strong>{" because of the "}
+                        <strong>{"fourth industrial revolution"}</strong>{" (or so I'm told.) Although
+                        some of my software may be a bit... unorthodox, I can assure you that I am
+                        simply "}<strong>{"too ahead of my time"}</strong>{". Check out "}
+                        <a class="animated link-orange" href="https://github.com/dolphingarlic/tom-stagl-ai-no">
+                            {"Tom StaglAIno"}
+                        </a>{" and "}
+                        <a class="animated link-orange" href="https://st0nks.ml">
+                            {"St0nks"}
+                        </a>{" for some truly "}<strong>{"next-generation technology"}</strong>{"."}
+                    </p>
                 </>
             }
         } else {
             html! {
-                <p>{"TODO: Sweet description"}</p>
+                <>
+                    <p>
+                        {"Since I first learnt to code in grade 9, computer science has become one
+                        of my greatest passions. I love CS for two main reasons. Firstly, it allows
+                        me to create almost anything my heart desires and share it with the world,
+                        all from a text editor. Secondly, it involves a lot of challenging technical
+                        problems to solve."}
+                    </p>
+                    <p>
+                        {"I like problem-solving because of the elegant and surprising techniques that
+                        I often employ to solve some of the problems. Because of this, I compete in many
+                        mathematics and informatics Olympiads such as the IMO and IOI."}
+                    </p>
+                    <p>
+                        {"When I'm not busy doing CS or maths, I also love listening to and playing music
+                        (especially classical music.) I play the piano, clarinet, and flute (and I always
+                        enjoy reading about some spicy music history too!)"}
+                    </p>
+                    <p>
+                        {"I also love sharing my knowledge with others through creating learning resources
+                        and tutoring. Because of this, I contribute to educational FOSS initiatives like
+                        the USACO Guide."}
+                    </p>
+                </>
             }
         };
 
@@ -138,7 +171,7 @@ impl Component for Home {
                         { description }
 
                         <p>
-                            {"Tl;dr - I am Andi, and I am"}
+                            {"TL;DR - I am Andi, and I am"}
                             <strong>
                                 <Typist
                                     word_list=iama

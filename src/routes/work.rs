@@ -97,12 +97,32 @@ const AWARDS: [WorkItem; 10] = [
     }
 ];
 
-const PROJECTS: [WorkItem; 1] = [WorkItem {
-    title: "Git the lines",
-    date: "May 2020",
-    subtitle: "Python | Regex | Web scraping | Discord bot",
-    description: "A Discord bot that prints out the lines referenced in a code snippet link.",
-}];
+const PROJECTS: [WorkItem; 4] = [
+    WorkItem {
+        title: "USACO Guide",
+        date: "Aug 2020",
+        subtitle: "Gatsby | C++ | Firebase",
+        description: "A free collection of curated, high-quality resources to help students excel in USACO contests."
+    },
+    WorkItem {
+        title: "Git the lines",
+        date: "May 2020",
+        subtitle: "Discord.py | Regex | Web scraping",
+        description: "A Discord bot that prints out the lines referenced in a code snippet link.",
+    },
+    WorkItem {
+        title: "PO(I)TD",
+        date: "Apr 2020",
+        subtitle: "Discord.py | Web scraping | Heroku",
+        description: "A Discord bot that sends daily problems from informatics Olympiads like the IOI."
+    },
+    WorkItem {
+        title: "Accomplice in Coding (AC)",
+        date: "Jul 2019",
+        subtitle: "Dialogflow | Actions on Google",
+        description: "An AI-powered Google Assistant action that gives you problems from informatics Olympiads based on your specifications."
+    }
+];
 
 const VOLUNTEERING: [WorkItem; 3] = [
     WorkItem {

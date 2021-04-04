@@ -298,6 +298,7 @@ a.animated:hover::after {
 
 .typist .blinking {
     animation: blinker 1s step-start infinite;
+    font-size: 1.2rem;
 }
 
 @keyframes blinker {
@@ -358,6 +359,10 @@ a.animated:hover::after {
 
 a.link-red::after {
     background-color: #a011243f;
+}
+
+a.link-orange::after {
+    background-color: #834c013f;
 }
 
 a.link-green::after {

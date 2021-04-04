@@ -1,25 +1,10 @@
 use yew::prelude::*;
 
-#[derive(Clone, PartialEq)]
-pub struct FunItem {
-    pub title: &'static str,
-    pub thumbnail_url: &'static str,
-    pub description: &'static str,
-    pub link: &'static str,
-}
-
-pub struct Fun {
-    featured: FunItem,
-    fun_items: Vec<FunItem>,
-    #[allow(unused)]
-    link: ComponentLink<Self>,
-}
-
-#[derive(Clone, PartialEq, Properties)]
-pub struct Props {
-    pub featured: FunItem,
-    #[prop_or_default]
-    pub fun_items: Vec<FunItem>,
+struct FunItem {
+    title: &'static str,
+    thumbnail_url: &'static str,
+    description: &'static str,
+    link: &'static str,
 }
 
 fn render_item(item: &FunItem) -> Html {
@@ -40,17 +25,61 @@ fn render_item(item: &FunItem) -> Html {
     }
 }
 
+// TODO: Use serde.rs and std::fs for the fun items instead
+const FEATURED: FunItem = FunItem {
+    title: "Hex",
+    thumbnail_url: "https://i.imgur.com/7asdDk5.png",
+    description: "Hex is a two-player strategy game on a hexagonal grid. Play it on itch.io or get the game on Google Play!",
+    link: "https://dolphingarlic.itch.io/hex"
+};
+
+const FUN_ITEMS: [FunItem; 6] = [
+    FunItem {
+        title: "Guess the Tune!",
+        thumbnail_url: "https://i.imgur.com/EoWBYV8.png",
+        description: "Can you identify random tunes by reading their melodies' notes? Find out on this fun quiz website!",
+        link: "http://melody-guesser.herokuapp.com"
+    },
+    FunItem {
+        title: "Tom StaglAIno",
+        thumbnail_url: "https://i.imgur.com/dN4iEgP.png",
+        description: "Can't get enough of Tom Stagliano? Enjoy GPT-2-generated Tom-wisdom in your own Discord server!",
+        link: "https://github.com/dolphingarlic/tom-stagl-ai-no"
+    },
+    FunItem {
+        title: "St0nks",
+        thumbnail_url: "https://i.imgur.com/X3NEEBN.png",
+        description: "Real News Headlines + Fake Financial Predictions = St0nks.",
+        link: "https://st0nks.ml"
+    },
+    FunItem {
+        title: "Joining Points",
+        thumbnail_url: "https://i.imgur.com/J2qvm9G.png",
+        description: "The game 'Joining Points' from IOI 2006, recreated in PyGame!",
+        link: "https://github.com/dolphingarlic/joining_points"
+    },
+    FunItem {
+        title: "Incredibowl",
+        thumbnail_url: "https://i.imgur.com/hv2l32M.png",
+        description: "Rate and share beautiful bowls on this fabowlous website!",
+        link: "https://incredibowl.herokuapp.com"
+    },
+    FunItem {
+        title: "Click for Cats",
+        thumbnail_url: "https://i.imgur.com/j6QO3oQ.png",
+        description: "My first website ever (made way back in 2017!) Don't judge pls (or do - I can't control you.)",
+        link: "http://bits-and-bytes.me/click_for_cats"
+    }
+];
+
+pub struct Fun {}
+
 impl Component for Fun {
     type Message = ();
-    type Properties = Props;
+    type Properties = ();
 
-    fn create(props: Self::Properties, link: ComponentLink<Self>) -> Self {
-        // TODO: Use serde.rs and std::fs for the fun items instead
-        Self {
-            featured: props.featured,
-            fun_items: props.fun_items,
-            link,
-        }
+    fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
+        Fun {}
     }
 
     fn update(&mut self, _: Self::Message) -> ShouldRender {
@@ -70,17 +99,17 @@ impl Component for Fun {
                 <div class="fun-bg fun-bg3" />
 
                 <div class="container">
-                    <h1 class="display-2">{"FUN STUFF :D"}</h1>
+                    <h1 class="display-2">{"✨ FUN STUFF ✨"}</h1>
 
                     <h2>{"FEATURED"}</h2>
                     <div class="row">
-                        { render_item(&self.featured) }
+                        { render_item(&FEATURED) }
                     </div>
                     <hr />
 
                     <h2>{"ALL"}</h2>
                     <div class="row">
-                        { for self.fun_items.iter().map(render_item) }
+                        { for FUN_ITEMS.iter().map(render_item) }
                     </div>
                 </div>
             </section>

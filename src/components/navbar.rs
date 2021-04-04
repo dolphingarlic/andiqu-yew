@@ -39,29 +39,31 @@ impl Component for Navbar {
         html! {
             <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1">{"Andi Qu"}</span>
+                    <RouterAnchor<AppRoute> classes="navbar-brand mb-0 h1" route=AppRoute::Home>
+                        <img style="image-rendering: pixelated;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABY0lEQVRYR+2WzRWCMAzH2w28yAxsoEMgZwdhDAbxrEvIKnhxg/rSL9vYj9Dy5IIHfLyW5Jfkn7Scbfzj1n/Xifs42te+bb9rNEiBtrnfR9fUJu3cOsXveQDBTsjHJE3DI7UmN9QCWAfiwRm/OCAAocHEU0XBzzoaDegB4ECJZZAA4Px9vLLD6+ZDOEY9iBBAYQniGQiUDiBkFjyAfI1TO35rTLG3IgC4WwbxFagWIYU4vycLIUXaKC0ac7Rep7dpFMITaVMIANRSqJE5IWYmZIR4JsCHE2diZpABL+hlGRgGBtOyN//OtATntg0xhFNzXMllAE70Nhtun6sMGJuqHAnnnhiSGqNrAJuBsZgMkpaBfAcU79gB1rkPoLtESKCxGq1xHFcd5ztAVAOmZqRLSbUGiru4/sN9DtAyUH4WqBoFNGJmxX8AjFQC94gdgJaBQB1J8wGlHjct2KAD1Ld80MLmAB+2vg4wq5XFbgAAAABJRU5ErkJggg==" alt="" width="32" height="32" />
+                    </RouterAnchor<AppRoute>>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div id="nav-content" class="collapse navbar-collapse mb-md-0 mb-2">
                         <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <RouterAnchor<AppRoute> classes="nav-link" route=AppRoute::Home>
+                                <RouterAnchor<AppRoute> classes="animated link-grey nav-link" route=AppRoute::Home>
                                     {"Home"}
                                 </RouterAnchor<AppRoute>>
                             </li>
                             <li class="nav-item">
-                                <RouterAnchor<AppRoute> classes="nav-link" route=AppRoute::Work>
+                                <RouterAnchor<AppRoute> classes="animated link-grey nav-link" route=AppRoute::Work>
                                     {"Work"}
                                 </RouterAnchor<AppRoute>>
                             </li>
                             <li class="nav-item">
-                                <RouterAnchor<AppRoute> classes="nav-link" route=AppRoute::Fun>
+                                <RouterAnchor<AppRoute> classes="animated link-grey nav-link" route=AppRoute::Fun>
                                     {"Fun"}
                                 </RouterAnchor<AppRoute>>
                             </li>
                             <li class="nav-item">
-                                <RouterAnchor<AppRoute> classes="nav-link" route=AppRoute::HowItsMade>
+                                <RouterAnchor<AppRoute> classes="animated link-grey nav-link" route=AppRoute::HowItsMade>
                                     {"How it's made"}
                                 </RouterAnchor<AppRoute>>
                             </li>

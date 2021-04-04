@@ -102,7 +102,7 @@ impl Component for Home {
                         <hr />
                         <p>
                             {"I like a lot of things, but one thing
-                            I really dislike is J*vaScr*pt.
+                            I really dislike is J*v*Scr*pt.
                             That's why I decided to remake "}
                             <strong>{"Andi Qu - The Website"}</strong>
                             {" with as little JS as possible!"}

@@ -9,6 +9,7 @@ use crate::routes::{
     fix_fragment_routes,
     fun::{Fun, FunItem},
     home::Home,
+    howitsmade::HowItsMade,
     work::Work,
     AppRoute,
 };
@@ -66,13 +67,13 @@ impl Component for App {
             FunItem {
                 title: "Guess the Tune!",
                 thumbnail_url: "https://i.imgur.com/EoWBYV8.png",
-                description: "Can you identify random tunes by reading the notes in their melody? Find out on this fun little quiz website!",
+                description: "Can you identify random tunes by reading their melodies' notes? Find out on this fun quiz website!",
                 link: "http://melody-guesser.herokuapp.com"
             },
             FunItem {
                 title: "Tom StaglAIno",
                 thumbnail_url: "https://i.imgur.com/dN4iEgP.png",
-                description: "Can't get enough of Tom Stagliano? Well, now you can enjoy AI-generated Tom-wisdom, all from your own Discord server!",
+                description: "Can't get enough of Tom Stagliano? Enjoy GPT-2-generated Tom-wisdom from your own Discord server!",
                 link: "https://github.com/dolphingarlic/tom-stagl-ai-no"
             },
             FunItem {
@@ -90,7 +91,7 @@ impl Component for App {
             FunItem {
                 title: "Incredibowl",
                 thumbnail_url: "https://i.imgur.com/hv2l32M.png",
-                description: "Rate and share bowl on this fabowlous website! (May or may not be down at random times as Heroku pauses my free projects.)",
+                description: "Rate and share beautiful bowls on this fabowlous website!",
                 link: "https://incredibowl.herokuapp.com"
             },
             FunItem {
@@ -113,7 +114,7 @@ impl Component for App {
                             AppRoute::Fun => html! {
                                 <Fun featured=featured fun_items=fun_items />
                             },
-                            AppRoute::HowItsMade => html! {"Not implemented yet :("}
+                            AppRoute::HowItsMade => html! { <HowItsMade /> }
                         }
                     } else {
                         // 404 when route matches no component

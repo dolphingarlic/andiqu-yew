@@ -26,7 +26,7 @@ fn render_item(item: &FunItem) -> Html {
     html! {
         <div class="col-lg-6 col-12 mb-3">
             <div class="card">
-                <img src={item.thumbnail_url} height="100px" width="100px" class="ms-3" />
+                <img src={item.thumbnail_url} height="100px" width="100px" class="my-3 ms-3" />
                 <div class="card-body">
                     <a href={item.link}>
                         <h4 class="card-title">{item.title}</h4>

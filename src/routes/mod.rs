@@ -1,5 +1,6 @@
 pub mod fun;
 pub mod home;
+pub mod howitsmade;
 pub mod work;
 
 use yew_router::prelude::*;

@@ -24,24 +24,22 @@ impl Component for Footer {
                     <div class="row">
                         <div id="social" class="my-3 col-md-6 col-12">
                             <div class="row">
-                                <a class="col" href="https://www.facebook.com/profile.php?id=100008200278280">
+                                <a class="col-lg-2 col-4" href="https://www.facebook.com/profile.php?id=100008200278280">
                                     <i class="fab fa-facebook my-1 me-2"></i>
                                 </a>
-                                <a class="col" href="https://github.com/dolphingarlic">
+                                <a class="col-lg-2 col-4" href="https://github.com/dolphingarlic">
                                     <i class="fab fa-github my-1 me-2"></i>
                                 </a>
-                                <a class="col" href="https://open.spotify.com/user/gidc6eskpzj8pv3mo9z7os0hr?si=jVTeli1iRL6jr_wEwmZPlQ">
+                                <a class="col-lg-2 col-4" href="https://open.spotify.com/user/gidc6eskpzj8pv3mo9z7os0hr?si=jVTeli1iRL6jr_wEwmZPlQ">
                                     <i class="fab fa-spotify my-1 me-2"></i>
                                 </a>
-                            </div>
-                            <div class="row">
-                                <a class="col" href="https://www.instagram.com/andi._.rainbows/">
+                                <a class="col-lg-2 col-4" href="https://www.instagram.com/andi._.rainbows/">
                                     <i class="fab fa-instagram my-1 me-2"></i>
                                 </a>
-                                <a class="col" href="https://www.youtube.com/channel/UCu2gsiVBpirUMppSSwJz2LA">
+                                <a class="col-lg-2 col-4" href="https://www.youtube.com/channel/UCu2gsiVBpirUMppSSwJz2LA">
                                     <i class="fab fa-youtube my-1 me-2"></i>
                                 </a>
-                                <a class="col" href="https://www.linkedin.com/in/andi-qu-48313a154/">
+                                <a class="col-lg-2 col-4" href="https://www.linkedin.com/in/andi-qu-48313a154/">
                                     <i class="fab fa-linkedin my-1 me-2"></i>
                                 </a>
                             </div>

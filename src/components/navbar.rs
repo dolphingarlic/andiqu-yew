@@ -24,9 +24,10 @@ impl Component for Navbar {
     fn view(&self) -> Html {
         let greetings: Vec<&str> = vec![
             "Hello! My name is Andi.",
-            "你好！ 我叫安迪。",
+            "你好！ 我叫安笛曲。",
             "Hallo! My naam is Andi.",
             "Tere! Minu nimi on Andi.",
+            "Kaixo! Nire izena Andi da.",
             "Hallo! Ich heiße Andi.",
             "¡Hola! Mi nombre es Andi.",
             "Sawubona! Igama lami ngingu-Andi.",
@@ -34,6 +35,7 @@ impl Component for Navbar {
             "Bonjour! Je m'appelle Andi.",
             "Привет! Меня зовут анди.",
             "हैलो! मेरा नाम एंडी है.",
+            "Nnọọ! Aha m bụ Andi."
         ];
 
         html! {
